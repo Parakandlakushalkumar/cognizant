@@ -1,0 +1,79 @@
+/* Topic: base styling and box model */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background: #eef6f4;
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+/* Topic: card layout, shadow, spacing, and border radius */
+.profile-card {
+    width: min(100%, 420px);
+    padding: 28px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(38, 50, 56, 0.16);
+    text-align: center;
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.role {
+    margin: 8px 0 16px;
+    color: #607d8b;
+    font-weight: 700;
+}
+
+/* Topic: flexbox and reusable UI badges */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skills span {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #d7f0ea;
+    color: #0f5f58;
+}
+
+/* Topic: simple responsive adjustment for mobile screens */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
